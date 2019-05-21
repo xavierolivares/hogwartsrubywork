@@ -4,8 +4,8 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :powerful
       t.integer :age
-      t.belongs_to :house
-      add_foreign_key :houses, :students
+      # t.belongs_to :house
+      # add_foreign_key :houses, :students
 
       t.timestamps
     end
