@@ -1,5 +1,5 @@
 class InstructorsController < ApplicationController
     def index
-        @all_intructors = Intructor.all()
+        @all_instructors = Instructor.all()
     end
 end
