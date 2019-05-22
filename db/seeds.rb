@@ -20,7 +20,7 @@ House.create(name: 'Slytherin', founder: 'Salazar Slytherin', dorm_room_password
 end
 
 50.times do |index|
-    Course.create(name: Faker::Name.name, level: rand(1..5), description: 'lorem ipsum')
+    Course.create(name: Faker::Name.name, level: rand(1..5), description: 'text', instructor_id: rand(1..50))
 end
 
 50.times do |index|
