@@ -16,11 +16,11 @@ House.create(name: 'Ravenclaw', founder: 'Rowena Ravenclaw', dorm_room_password:
 House.create(name: 'Slytherin', founder: 'Salazar Slytherin', dorm_room_password: 'Shessid')
 
 50.times do |index|
-    Instructor.create(name: Faker::Name.name, difficult: rand(true..false))
+    Instructor.create(name: Faker::Name.name, difficult: [true, false].sample)
 end
 
 50.times do |index|
-    Course.create(name: Faker::Name.name, level: rand(1..5), text: 'lorem ipsum')
+    Course.create(name: Faker::Name.name, level: rand(1..5), description: 'lorem ipsum')
 end
 
 50.times do |index|
@@ -28,5 +28,5 @@ end
 end
 
 50.times do |index|
-    CoursesStudent.create(name: Faker::Name.name, age: rand(1..50), powerful: [true,false].sample, house_id: rand(1..4))
+    CoursesStudent.create(student_id: rand(1..50), course_id: rand(1..50))
 end
