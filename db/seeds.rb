@@ -10,11 +10,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-1.times do |index|
 House.create(name: 'Gryffindor', founder: 'Godric Gryffindor', dorm_room_password: 'Quid Agis')
 House.create(name: 'Hufflepuff', founder: 'Helga Hufflepuff', dorm_room_password: 'Knock')
 House.create(name: 'Ravenclaw', founder: 'Rowena Ravenclaw', dorm_room_password: 'Kaw Kaw')
 House.create(name: 'Slytherin', founder: 'Salazar Slytherin', dorm_room_password: 'Shessid')
+
+50.times do |index|
+    Instructor.create(name: Faker::Name.name, difficult: rand(true..false))
 end
 
 50.times do |index|
